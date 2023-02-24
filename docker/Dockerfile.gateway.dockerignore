@@ -13,4 +13,5 @@
 !pyproject.toml 
 !docker/ceph.repo
 !docker/centos.repo
+!docker/dnf.conf
 !dnf.conf
