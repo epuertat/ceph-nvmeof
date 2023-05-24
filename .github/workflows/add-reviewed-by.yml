@@ -1,0 +1,13 @@
+on:
+  pull_request_review:
+    types:
+      - submitted
+
+jobs:
+  approved:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      # https://github.com/marketplace/actions/add-reviewed-by
+      # Pinned to 86dcf10d5d2aadd1a2c78084a5d6598c84539843
+      - uses: ntessore/add-reviewed-by-action@86dcf10d5d2aadd1a2c78084a5d6598c84539843
